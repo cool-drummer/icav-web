@@ -5,7 +5,7 @@ import HeaderLandingFormSurvey from "../../components/form-survey-landing/Header
 import Blog from "../../components/form-survey-landing/Blog";
 import Footer from "../../components/form-survey-landing/Footer";
 import HeroBannerEight from "../../components/icav-home/HeroBannerEight";
-
+import Map from "../../elements/Map"
 const FormSurveyLanding = () => {
   return (
     <div className="main-page-wrapper p0 font-gordita">
@@ -13,7 +13,6 @@ const FormSurveyLanding = () => {
         <title>Lorem</title>
       </Helmet>
       {/* End Page SEO Content */}
-      
 
       <HeaderLandingFormSurvey />
       {/* End Header */}
@@ -21,7 +20,7 @@ const FormSurveyLanding = () => {
       <HeroBannerEight />
 
       <div
-        className="fancy-feature-thirtyFive position-relative lg-container pt-225 md-pt-120"
+        className="fancy-feature-thirtyFive position-relative lg-container  pt-140 md-pt-100"
         id="product"
       >
         <div className="container">
@@ -46,7 +45,18 @@ const FormSurveyLanding = () => {
           </div>
         </div>
       </div>
-      <div className="feature-blog-five lg-container mt-160 md-pt-120">
+
+     
+
+     <div className="feature-blog-five lg-container mt-50 md-pt-100">
+        <div>
+        <Map />
+        </div>
+      </div>
+
+
+
+      <div className="feature-blog-five lg-container mt-30 md-pt-60">
         <div className="container">
           <div
             className="title-style-eleven text-center mb-40 md-mb-20"
@@ -64,8 +74,6 @@ const FormSurveyLanding = () => {
         </div>
       </div>
 
-     
-      
       <div className="theme-footer-nine lg-container">
         <div className="container">
           <Footer />

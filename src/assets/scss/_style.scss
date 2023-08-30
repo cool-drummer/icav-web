@@ -557,7 +557,7 @@ h6 {
   font-weight: normal;
   font-size: 72px;
   line-height: 1.27em;
-  color: #000;
+  color: #fff;
 }
 .dark-style .title-style-six h2 {
   color: #fff;
@@ -8713,28 +8713,52 @@ body .shop-btn-two:hover {
   color: #ffb840;
 }
 /*------------------ Fancy Feature Ten --------------*/
-.fancy-feature-ten {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+/* Estilos generales para .fancy-feature-ten */
 .fancy-feature-ten .bg-wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
-  background: #f3f8ff;
-  border-radius: 40px;
-  padding: 130px 0 150px;
+  background: #202020;
+  padding: 0px 0 60px;
   position: relative;
-  z-index: 1;
 }
+
 .fancy-feature-ten .shape-one {
   bottom: -37px;
-  right: 10%;
+  border-color: #02e7e8;
 }
+
 .fancy-feature-ten .sub-text {
   font-size: 24px;
   line-height: 1.91em;
-  color: #000;
+  color: #fff;
 }
+
+/* Media query para pantallas pequeñas (por ejemplo, smartphones) */
+@media (max-width: 576px) {
+  .fancy-feature-ten .bg-wrapper {
+    padding: 0px 0 30px;
+  }
+  .fancy-feature-ten .sub-text {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+
+/* Media query para pantallas medianas (por ejemplo, tabletas) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .fancy-feature-ten .bg-wrapper {
+    padding: 0px 0 40px;
+  }
+  .fancy-feature-ten .sub-text {
+    font-size: 20px;
+    line-height: 1.7em;
+  }
+}
+
+/* Media query para pantallas grandes (por ejemplo, computadoras de escritorio) */
+@media (min-width: 993px) {
+  /* Puedes ajustar los estilos aquí para pantallas más grandes si es necesario */
+}
+
+
 .block-style-fifteen {
   background: #fff;
   border-radius: 10px;
@@ -8750,7 +8774,7 @@ body .shop-btn-two:hover {
   height: 100%;
   top: 0;
   left: 0;
-  border: 2px solid #000;
+  border: 2px solid #7034ff;
   z-index: -1;
   border-radius: 10px;
   opacity: 0;
@@ -10958,78 +10982,47 @@ body .shop-btn-two:hover {
                     Product landing / Online Video Editor           
 =========================================================================*/
 /*---------------- Theme Hero Banner ---------------*/
-
 /* Estilos generales */
 .video-overlay {
-  position: absolute;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.video-container {
+  width: 100%; /* Ancho al 100% para mantener el ancho del video */
+  height: 900px; /* Ajusta la altura según tus necesidades */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  margin-bottom: 10px;
+}
+
+video {
+  height: 100vh;
+  width:100vw;
+  object-fit: cover;
+  position: relative;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -999;
 }
 
 .video-content {
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centrar horizontal y verticalmente */
   color: #ffffff;
-  margin: 10px;
+  
 }
 
-.video-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* Mantener la relación de aspecto 16:9 */
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 
-/* Estilos específicos para el breakpoint */
-@media screen and (max-width: 768px) {
-  .hero-banner-eight .hero-heading {
-    font-size: 60px; /* Tamaño de fuente reducido */
-  }
-  .hero-banner-eight .hero-sub-heading {
-    font-size: 18px; /* Tamaño de fuente reducido */
-    padding: 25px 0 35px; /* Espaciado reducido */
-  }
-
-  /* Ajustar el tamaño del video en el breakpoint */
-  .video-container {
-    padding-bottom: 75%; /* Mantener la relación de aspecto 4:3 */
-  }
-}
-
-/* Otros breakpoints y estilos adicionales según tus necesidades */
-@media screen and (max-width: 480px) {
-  .hero-banner-eight .hero-heading {
-    font-size: 45px; /* Tamaño de fuente reducido */
-  }
-  .hero-banner-eight .hero-sub-heading {
-    font-size: 16px; /* Tamaño de fuente reducido */
-    padding: 20px 0 25px; /* Espaciado reducido */
-  }
-
-  /* Ajustar el tamaño del video en el breakpoint */
-  .video-container {
-    padding-bottom: 100%; /* Mantener la relación de aspecto 1:1 */
-  }
-}
 
 
 /*----------------- Fancy Feature Eighteen -------------------*/
@@ -13942,7 +13935,7 @@ video {
 /*----------------- Fancy Short Banner Fourteen -------------------*/
 .fancy-short-banner-fourteen {
   background: #1f1f1f;
-  padding: 110px 0 120px;
+  padding: 50px 0 10px;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -14415,6 +14408,20 @@ video {
   animation: jump10p 3s infinite linear;
 }
 /*-------------------- Fancy Feature Thirty Five --------------------*/
+
+.fancy-feature-thirtyFive {
+  margin-top: 300px;
+  margin-bottom: 50px;
+}
+
+/* Media query para pantallas más pequeñas (por ejemplo, smartphones) */
+@media (max-width: 576px) {
+  .fancy-feature-thirtyFive {
+    margin-top: 70px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
 .fancy-feature-thirtyFive .slider-wrapper {
   position: absolute;
   bottom: 0;
@@ -16656,8 +16663,7 @@ video {
 .map-responsive iframe {
   left: 0;
   top: 0;
-  border: 20px;
-  height: 85%;
+  height: 100%;
   width: 100%;
   position: absolute;
 }

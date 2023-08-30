@@ -1,22 +1,24 @@
 import React from "react";
+import Map from "../../elements/Map";
+
 
 const CallToActionSeven = () => {
   return (
-    <div className="fancy-short-banner-fourteen mt-150 md-mt-80">
+    <div className="fancy-short-banner-fourteen mt-150 md-mt-80 mr-30 ml-30 mb-30">
       <div className="container">
         <div className="row">
           <div className="col-12" data-aos="fade-up" data-aos-duration="1200">
             <div className="title-style-thirteen">
               <h2>
-                200k+ Customers <br />
-                have our deski.Try it now!
+                Encuentranos 
+              
               </h2>
+              
+
             </div>
-            <p>Try it risk free — we don’t charge cancellation fees.</p>
-            <a href="sign-up.html" className="theme-btn-twelve">
-              Let’s Get Started
-            </a>
+           
           </div>
+          
         </div>
       </div>
       {/* <!-- /.container --> */}
@@ -60,6 +62,7 @@ const CallToActionSeven = () => {
         alt="shape"
         className="shapes shape-eight"
       />
+      <Map />
     </div>
   );
 };

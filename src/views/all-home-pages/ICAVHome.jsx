@@ -5,7 +5,9 @@ import HeaderLandingFormSurvey from "../../components/form-survey-landing/Header
 import Blog from "../../components/form-survey-landing/Blog";
 import Footer from "../../components/form-survey-landing/Footer";
 import HeroBannerEight from "../../components/icav-home/HeroBannerEight";
-import Map from "../../elements/Map"
+import Map from "../../elements/Map";
+import FancyFeatureTen from "../../components/features/FancyFeatureTen";
+import CallToActionSeven from "../../components/call-to-action/CallToActionSeven";
 const FormSurveyLanding = () => {
   return (
     <div className="main-page-wrapper p0 font-gordita">
@@ -20,12 +22,12 @@ const FormSurveyLanding = () => {
       <HeroBannerEight />
 
       <div
-        className="fancy-feature-thirtyFive position-relative lg-container  pt-140 md-pt-100"
+        className="fancy-feature-thirtyFive position-relative col-md-12"
         id="product"
       >
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-md-3">
               <div className="block-style-thirtySix">
                 <div className="title-style-fourteen">
                   <div className="upper-title">forma parte</div>
@@ -46,15 +48,28 @@ const FormSurveyLanding = () => {
         </div>
       </div>
 
-     
-
-     <div className="feature-blog-five lg-container mt-50 md-pt-100">
-        <div>
-        <Map />
+      <div className="fancy-feature-ten pt-100 md-pt-70" id="features">
+        <div className="bg-wrapper">
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              <div
+                className="col-sm-4 col-md-6"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+              >
+                <div className="title-style-six">
+                  <h2>
+                    conoce nuestros <br /> días de servicio
+                  </h2>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <FancyFeatureTen />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
 
       <div className="feature-blog-five lg-container mt-30 md-pt-60">
         <div className="container">
@@ -72,6 +87,41 @@ const FormSurveyLanding = () => {
             <Blog />
           </div>
         </div>
+      </div>
+
+      <div className="fancy-feature-ten mt-10 " id="features">
+        <div className="bg-wrapper">
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              <div
+                className="col-md-12"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+              >
+                <div className="title-style-six pt-20">
+                  <center><h2>visitanos</h2></center>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <Map />
+      </div>
+
+      <div className="fancy-feature-ten">
+        <div className="bg-wrapper">
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="feature-blog-five lg-container mt-50 md-pt-100">
+        <div></div>
       </div>
 
       <div className="theme-footer-nine lg-container">

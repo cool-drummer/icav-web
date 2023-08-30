@@ -3,22 +3,23 @@ import Video from "../../elements/Video";
 import BrandFive from "../brand/BrandFive";
 
 const heroContent = {
-  title: '"lorem,',
-  description: ` lorem"`,
-  buttonText: " Download - It’s free",
+  title:
+    '"Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar."',
+  description: `Mateo 11:28 (RVR1960) - `,
+  buttonText: " ",
 };
 
 const HeroBannerEight = () => {
   return (
     <div className="hero-banner-eight">
-      <div className="video-overlay"></div>
-      <div className="video-container d-md-flex flex-md-column">
-        {" "}
-        {/* Utiliza d-md-flex para flexbox en dispositivos medianos y grandes */}
-        <Video />
-        <div className="video-content position-relative overflow-hidden" >
-          <div className="col-lg-10 m-auto">
-            <h1 className="hero-heading" data-aos="fade-up">
+      <div className="video-container">
+        <video autoPlay loop muted>
+          <source src="/video/video-header-icavweb.mp4" type="video/mp4" />
+          
+        </video>
+        <div className="video-content">
+          <div className="col-md-10">
+            <h1 className="hero-heading text-white" data-aos="fade-up">
               {heroContent.title}
             </h1>
             <p
@@ -39,12 +40,7 @@ const HeroBannerEight = () => {
           </div>
         </div>
       </div>
-
-      {/* /.video-wrapper */}
-
-      {/* /.partner-slider-two */}
     </div>
-    //   /.hero-banner-eight
   );
 };
 

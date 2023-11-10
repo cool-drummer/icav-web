@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Scrollspy from "react-scrollspy";
-import { Link } from "react-router-dom";
 import Modal from "react-modal";
-import HeaderPopupForm from "../form/HeaderPopupForm";
+import { Link } from "react-router-dom";
+import Scrollspy from "react-scrollspy";
 import MegaMenuLanding from "../../components/header/mega-menu/MegaMenuLanding";
+import HeaderPopupForm from "../form/HeaderPopupForm";
 
 Modal.setAppElement("#root");
 
@@ -29,9 +29,6 @@ const HeaderLandingFormSurvey = () => {
 
   return (
     <>
-      {/* =============================================
-				Theme Main Menu
-			==============================================  */}
       <div
         className={
           navbar
@@ -40,33 +37,10 @@ const HeaderLandingFormSurvey = () => {
         }
       >
         <div className="d-flex align-items-center">
-          <div className="logo order-lg-1">
-            <Link to="/event-organizer">
-              <img src="images/logo/deski_06.svg" alt="brand" />
+          <div className="logo order-md-1">
+            <Link to="/">
+              <img src="images/logo/icav-logo-sm.png" alt="brand" />
             </Link>
-          </div>
-          {/* End logo */}
-
-          <div className="right-widget ms-xl-5 order-lg-3">
-            <ul className="d-flex align-items-center">
-              <li>
-                <Link
-                  to="/login"
-                  className="signIn-action d-flex align-items-center"
-                >
-                  <img src="images/icon/120.svg" alt="icon" />
-                  <span>login</span>
-                </Link>
-              </li>
-              <li>
-                <button
-                  className="demo-button d-none d-sm-block"
-                  onClick={toggleModalOne}
-                >
-                  <span>Request A Demo</span>
-                </button>
-              </li>
-            </ul>
           </div>
 
           <nav

@@ -1,27 +1,29 @@
 import React from "react";
 // Route Specific
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ScrollTopBehaviour from "../components/ScrollTopBehaviour";
 
 // All HOME PAGE ROUTES
+import AppointmentScheduling from "../views/all-home-pages/AppointmentScheduling"; //appointment-sc
+import ComingSoon from "../views/all-home-pages/ComingSoon"; //all-home-pages only
+import CustomerSupport from "../views/all-home-pages/CustomerSupport"; // eslint-disable-line
 import DocLanding from "../views/all-home-pages/DocLanding";
 import DocSignatureLanding from "../views/all-home-pages/DocSignatureLanding"; // docsignaturelanding
-import ProjectManagement from "../views/all-home-pages/ProjectManagement"; //all-home-pages/ProjectManagement
-import CustomerSupport from "../views/all-home-pages/CustomerSupport"; // eslint-disable-line
+import Ecommerce from "../views/all-home-pages/Ecommerce"; // only ecommerce-factory is reset
+import ICAVHome from "../views/all-home-pages/ICAVHome";
+import MobileAppLanding from "../views/all-home-pages/MobileAppLanding"; //mobile-description
+import NoteTakingLanding from "../views/all-home-pages/NoteTakingLanding"; //note-talking-landing
 import ProductLanding from "../views/all-home-pages/ProductLanding"; //product-landing
 import ProductLandingDark from "../views/all-home-pages/ProductLandingDark"; //productLandingDark
-import NoteTakingLanding from "../views/all-home-pages/NoteTakingLanding"; //note-talking-landing
+import ProjectManagement from "../views/all-home-pages/ProjectManagement"; //all-home-pages/ProjectManagement
 import VideoEditorLanding from "../views/all-home-pages/VideoEditorLanding"; //video-editor-landing
-import AppointmentScheduling from "../views/all-home-pages/AppointmentScheduling"; //appointment-sc
-import MobileAppLanding from "../views/all-home-pages/MobileAppLanding"; //mobile-description
 import WebsiteBuilderLanding from "../views/all-home-pages/WebsiteBuilderLanding"; // https://
-import Ecommerce from "../views/all-home-pages/Ecommerce"; // only ecommerce-factory is reset
-import ComingSoon from "../views/all-home-pages/ComingSoon"; //all-home-pages only
-import ICAVHome from "../views/all-home-pages/ICAVHome";
 // All INNER PAGES ROUTES START FROM BELLOW
 
 // PAGES DROPDOWN ALL ROUTES
 // Team inner pages
+import Faq from "../views/inner-pages/pages/Faq";
+import FaqDetails from "../views/inner-pages/pages/FaqDetails";
 import Team1 from "../views/inner-pages/pages/team/Team1";
 import Team2 from "../views/inner-pages/pages/team/Team2";
 import Team3 from "../views/inner-pages/pages/team/Team3";
@@ -30,20 +32,18 @@ import Team5 from "../views/inner-pages/pages/team/Team5";
 import Team6 from "../views/inner-pages/pages/team/Team6";
 import TeamDetailsV1 from "../views/inner-pages/pages/team/TeamDetailsV1";
 import TeamDetailsV2 from "../views/inner-pages/pages/team/TeamDetailsV2";
-import Faq from "../views/inner-pages/pages/Faq";
-import FaqDetails from "../views/inner-pages/pages/FaqDetails";
 
 // Contact us inner pages
 import ContactCustomerSupport from "../views/inner-pages/pages/contact/ContactCustomerSupport";
+import ContactDocumentation from "../views/inner-pages/pages/contact/ContactDocumentation";
 import ContactEventOrganizer from "../views/inner-pages/pages/contact/ContactEventOrganizer";
 import ContactProjectManagement from "../views/inner-pages/pages/contact/ContactProjectManagement";
-import ContactDocumentation from "../views/inner-pages/pages/contact/ContactDocumentation";
 
 // About us inner pages
 import AboutCustomerSupport from "../views/inner-pages/pages/about/AboutCustomerSupport";
+import AboutDocumentation from "../views/inner-pages/pages/about/AboutDocumentation";
 import AboutEventOrganizer from "../views/inner-pages/pages/about/AboutEventOrganizer";
 import AboutProjectManagement from "../views/inner-pages/pages/about/AboutProjectManagement";
-import AboutDocumentation from "../views/inner-pages/pages/about/AboutDocumentation";
 
 // Pricing inner pages
 import PricingCustomerSupport from "../views/inner-pages/pages/pricing/PricingCustomerSupport";
@@ -51,43 +51,43 @@ import PricingEventOrganizer from "../views/inner-pages/pages/pricing/PricingEve
 import PricingProjectManagement from "../views/inner-pages/pages/pricing/PricingProjectManagement";
 
 // FEATURES DROPDOWN ALL ROUTES
+import FeaturesCustomerSupport from "../views/inner-pages/features/FeaturesCustomerSupport";
+import ProductCustomerSupport from "../views/inner-pages/features/ProductCustomerSupport";
+import SolutionMangement from "../views/inner-pages/features/SolutionMangement";
 import Login from "../views/inner-pages/features/miscellaneous/Login";
 import SignUp from "../views/inner-pages/features/miscellaneous/SignUp";
 import TermsConditions from "../views/inner-pages/features/miscellaneous/TermsConditions";
-import SolutionMangement from "../views/inner-pages/features/SolutionMangement";
-import ProductCustomerSupport from "../views/inner-pages/features/ProductCustomerSupport";
-import FeaturesCustomerSupport from "../views/inner-pages/features/FeaturesCustomerSupport";
 
 // SERVICE PAGES ROUTES
+import ServiceDetails from "../views/inner-pages/service/ServiceDetails";
 import ServiceV1 from "../views/inner-pages/service/ServiceV1";
 import ServiceV2 from "../views/inner-pages/service/ServiceV2";
 import ServiceV3 from "../views/inner-pages/service/ServiceV3";
 import ServiceV4 from "../views/inner-pages/service/ServiceV4";
-import ServiceDetails from "../views/inner-pages/service/ServiceDetails";
 
 // DOCS DROPDOWN ALL ROUTES
-import DocFullWidth from "../views/inner-pages/docs/DocFullWidth";
-import DocFullWidthBanner from "../views/inner-pages/docs/DocFullWidthBanner";
+import Changelog from "../views/inner-pages/docs/Changelog";
 import DocBox from "../views/inner-pages/docs/DocBox";
 import DocBoxWithBanner from "../views/inner-pages/docs/DocBoxWithBanner";
-import Changelog from "../views/inner-pages/docs/Changelog";
+import DocFullWidth from "../views/inner-pages/docs/DocFullWidth";
+import DocFullWidthBanner from "../views/inner-pages/docs/DocFullWidthBanner";
 
 // PORTFOLIO DROPDOWN ALL ROUTES
+import PortfolioDetailsV1 from "../views/inner-pages/portfolio/PortfolioDetailsV1";
 import PortfolioV1 from "../views/inner-pages/portfolio/PortfolioV1";
 import PortfolioV2 from "../views/inner-pages/portfolio/PortfolioV2";
 import PortfolioV3 from "../views/inner-pages/portfolio/PortfolioV3";
 import PortfolioV4 from "../views/inner-pages/portfolio/PortfolioV4";
 import PortfolioV5 from "../views/inner-pages/portfolio/PortfolioV5";
-import PortfolioDetailsV1 from "../views/inner-pages/portfolio/PortfolioDetailsV1";
 
 // BLOGS DROPDOWN ALL ROUTES
+import BlogDetails from "../views/inner-pages/blog-pages/BlogDetails";
 import BlogV1 from "../views/inner-pages/blog-pages/BlogV1";
 import BlogV2 from "../views/inner-pages/blog-pages/BlogV2";
 import BlogV3 from "../views/inner-pages/blog-pages/BlogV3";
 import BlogV4 from "../views/inner-pages/blog-pages/BlogV4";
 import BlogV5 from "../views/inner-pages/blog-pages/BlogV5";
 import BlogV6 from "../views/inner-pages/blog-pages/BlogV6";
-import BlogDetails from "../views/inner-pages/blog-pages/BlogDetails";
 
 // Not Found Page
 import NotFound from "../views/NotFound";
@@ -98,17 +98,27 @@ import Checkout from "../views/inner-pages/e-commerce/Checkout";
 import ProductDetails from "../views/inner-pages/e-commerce/ProductDetails";
 
 import FormSurveyLanding from "../views/all-home-pages/FormSurveyLanding";
-import Ninos from "../views/inner-pages/pages/icav-redirect/Ninos";
+import Discipulado from "../views/inner-pages/pages/icav-redirect/Discipulado";
+import GrupoConexion from "../views/inner-pages/pages/icav-redirect/GrupoConexion";
 import Jovenes from "../views/inner-pages/pages/icav-redirect/Jovenes";
 import Matrimonios from "../views/inner-pages/pages/icav-redirect/Matrimonios";
 import Musica from "../views/inner-pages/pages/icav-redirect/Musica";
+import Ninos from "../views/inner-pages/pages/icav-redirect/Ninos";
 import Oracion from "../views/inner-pages/pages/icav-redirect/Oracion";
+import Worship from "../views/inner-pages/pages/icav-redirect/Worship";
+import Zoom from "../views/inner-pages/pages/icav-redirect/Zoom";
 
 const AllRoutes = () => {
   return (
     <>
       <ScrollTopBehaviour />
       <Routes>
+      <Route path="/worship" element={<Worship />} />
+        <Route path="/oracion-zoom" element={<Zoom />} />
+        <Route path="/grupo-conexion" element={<GrupoConexion />} />
+        <Route path="/discipulado" element={<Discipulado />} />
+
+
         <Route path="/ninos" element={<Ninos />} />
         <Route path="/jovenes" element={<Jovenes />} />
         <Route path="/matrimonios" element={<Matrimonios />} />

@@ -1,15 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import HeaderLandingDark from "../../../../components/header/landing/HeaderLandingDark";
-import MusicaDesc from "./MusicaDesc";
+import ZoomDesc from "./ZoomDesc";
 
 
-const Musica = () => {
+const  Zoom = () => {
   return (
     <div className="main-page-wrapper p0 font-gordita">
       <Helmet>
         <title>
-        Musica
+        Worship Nights
         </title>
       </Helmet>
 
@@ -18,9 +18,18 @@ const Musica = () => {
    
       <div className="block-style-thirtySix lg-container pt-225 md-pt-120">
         <div className="container">
-          <MusicaDesc />
+          <ZoomDesc />
         </div>
       </div>
+
+ 
+      {/* <!-- /.integrated-apps --> */}
+
+      {/* <!--
+        =====================================================
+            Client Feedback Slider Eight
+        =====================================================
+        --> */}
       
       <div className="theme-footer-nine lg-container">
         <div className="container">
@@ -31,4 +40,4 @@ const Musica = () => {
   );
 };
 
-export default Musica;
+export default  Zoom;

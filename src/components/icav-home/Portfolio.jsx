@@ -34,13 +34,13 @@ const Portfolio = () => {
   const portfolioContent = [
     {
       _id: 1,
-      image: "img_561",
+      image: "oracion",
       editLink: "/oracion",
       viewLink: "#",
     },
     {
       _id: 2,
-      image: "img_562",
+      image: "jovenes",
       editLink: "/jovenes",
       viewLink: "#",
     },

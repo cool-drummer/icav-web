@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Scrollspy from "react-scrollspy";
-import { Link } from "react-router-dom";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
+import Scrollspy from "react-scrollspy";
 import HeaderPopupForm from "../../form/HeaderPopupForm";
 import MegaMenuLanding from "../../header/mega-menu/MegaMenuLanding";
 
@@ -21,7 +21,7 @@ const HeaderLandingDark = () => {
     if (window.scrollY >= 90) {
       setNavbar(true);
     } else {
-      setNavbar(false);
+      setNavbar(true);
     }
   };
 
@@ -35,14 +35,14 @@ const HeaderLandingDark = () => {
       <div
         className={
           navbar
-            ? "theme-main-menu sticky-menu theme-menu-five fixed"
+            ? "theme-main-menu sticky-menu theme-menu-five fixed blurred"
             : "theme-main-menu sticky-menu theme-menu-five"
         }
       >
         <div className="d-flex align-items-center justify-content-center">
           <div className="logo">
             <Link to="/doc-landing">
-              <img src="images/logo/deski_06.svg" alt="brand" />
+              <img src="images/logo/icav-logo-small.svg" alt="brand" />
             </Link>
           </div>
           {/* End logo */}

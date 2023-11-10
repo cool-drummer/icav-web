@@ -1,42 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-const FeaturesContent = [
-  {
-    bgColor: "#FFEBDB",
-    icon: "68",
-    title: "domingos",
-    desc: `de 12pm a 4pm`,
-    dataDealy: "0",
-  },
-  {
-    bgColor: "#E0F8F8",
-    icon: "67",
-    title: "jueves",
-    desc: `de 5pm a 9pm`,
-    dataDealy: "100",
-  },
-];
 
 const FancyFeatureTen = () => {
   return (
-    <div className="row justify-content-center">
-      {FeaturesContent.map((val, i) => (
-        <div
-          className="col-md-6"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-          data-aos-delay={val.dataDealy}
-          key={i}
-        >
-          <div className="block-style-fifteen mt-30">
-            
-            <h3>{val.title}</h3>
-            <p>{val.desc}</p>
+    <div
+    >
+      <div
+        className="container col-md-12"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <div className="row">
+         
+
+          <div className="block-style-fifteen col-md-12 mt-30 mb-30">
+            <h3 className="text-center strong">Días de servicio:</h3>
+            <h5 className="text-center">-Jueves: 5pm a 7pm</h5>
+            <h5 className="text-center">-Domingo: 12pm a 3pm</h5>
+
+            <h3 className="text-center strong">Informacion de contacto:</h3>
+            <h5 className="text-center">Segunda Cda. De Berriozabal, Col. Atzacoalco, Teoloyucan, Mex.</h5>
+            <h5 className="text-center">5520919411</h5>
+
           </div>
-          {/* /.block-style-ten */}
+
+          
         </div>
-      ))}
+
+      
+      </div>
     </div>
   );
 };

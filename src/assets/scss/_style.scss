@@ -270,7 +270,7 @@ Primary use:  ib-themes
   --text-color: #73737b;
   --text-light: #888888;
   --heading: #101621;
-  --blue-dark: #6f55ff;
+  --blue-dark: #3061ca;
   --red-light: #fd6a5e;
   --yellow-deep: #ffb840;
   --blue-light: #3bb0d7;
@@ -8537,6 +8537,7 @@ body .shop-btn-two:hover {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  width: 98px; /* Ajuste el ancho del logo según sus necesidades */
 }
 .theme-menu-five .right-widget {
   position: absolute;
@@ -8571,6 +8572,15 @@ body .shop-btn-two:hover {
 }
 .theme-menu-five .navbar-nav .nav-item .nav-link.active {
   text-decoration: underline;
+}
+
+.theme-menu-five .navbar {
+  height: 70px; /* Ajuste la altura de la barra de navegación según sus necesidades */
+  padding: 20px 0; /* Ajuste el relleno superior e inferior de la barra de navegación según sus necesidades */
+}
+
+.theme-main-menu.blurred {
+  backdrop-filter: blur(5px); /* Ajuste el valor del desenfoque según sus necesidades */
 }
 
 /*---------------------Theme Hero Banner/Five ---------------*/
@@ -8763,7 +8773,7 @@ body .shop-btn-two:hover {
   background: #fff;
   border-radius: 10px;
   position: relative;
-  padding: 45px 35px 30px 40px;
+  padding: 15px;
   color: #000;
   z-index: 1;
 }
@@ -8772,13 +8782,11 @@ body .shop-btn-two:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  border: 2px solid #7034ff;
   z-index: -1;
   border-radius: 10px;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+  
 }
 .block-style-fifteen:hover:before {
   opacity: 1;
@@ -8791,8 +8799,21 @@ body .shop-btn-two:hover {
 .block-style-fifteen h3 {
   font-weight: 500;
   font-size: 24px;
-  text-transform: capitalize;
   padding: 27px 0 22px;
+  text-align: center;
+}
+
+.block-style-fifteen h5 {
+  font-weight: 200;
+  font-size: 17px;
+  padding: 27px 0 22px;
+  text-align: left;
+}
+.block-style-fifteen p {
+  font-weight: 300;
+  font-size: 17px;
+  padding: 27px 0 22px;
+  text-align: center;
 }
 /*----------------- Fancy Text block Twenty One -------------------*/
 .fancy-text-block-twentyOne .container {
@@ -9396,7 +9417,7 @@ body .shop-btn-two:hover {
   color: rgba(255, 255, 255, 1);
 }
 .dark-style .theme-menu-five .navbar-nav .nav-item .nav-link.active {
-  color: #fff;
+  filter: blur(5px); 
 }
 .dark-style .theme-menu-five .right-widget .demo-button {
   color: #fff;
@@ -10996,8 +11017,7 @@ body .shop-btn-two:hover {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centrar verticalmente */
-  margin-bottom: 10px;
+  align-items: center;
 }
 
 video {
@@ -14410,14 +14430,38 @@ video {
 /*-------------------- Fancy Feature Thirty Five --------------------*/
 
 .fancy-feature-thirtyFive {
-  margin-top: 300px;
-  margin-bottom: 50px;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (max-width:1360px) {
+  .fancy-feature-thirtyFive {
+    margin-top: 200px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
+@media (max-width:980px) {
+  .fancy-feature-thirtyFive {
+    margin-top: 0px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
+
+@media (max-width:764px) {
+  .fancy-feature-thirtyFive {
+    margin-top: 0px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
 }
 
 /* Media query para pantallas más pequeñas (por ejemplo, smartphones) */
 @media (max-width: 576px) {
   .fancy-feature-thirtyFive {
-    margin-top: 70px;
+    margin-top: 0px;
      /* Ajusta el margen superior para pantallas más pequeñas */
   }
 }
@@ -14428,6 +14472,7 @@ video {
   right: -11vw;
   width: 72vw;
   margin: 0 -24px;
+  
 }
 .portfolio_slider_two {
   margin: 0 -20px;
@@ -14494,6 +14539,7 @@ video {
   cursor: pointer;
   transform: scale(0.8);
   transition: all 0.3s ease-in-out;
+  
 }
 .fancy-feature-thirtyFive .slider-arrows li:first-child i {
   transform: rotate(-180deg);
@@ -14637,6 +14683,10 @@ video {
   color: rgba(0, 0, 0, 0.4);
 }
 /*-------------------- Feature Blog Five -----------------*/
+.feature-blog-five {
+  background: #202020;
+}
+
 .feature-blog-five .post-meta {
   width: 100%;
 }
@@ -14649,6 +14699,13 @@ video {
   background: #212121;
   position: relative;
 }
+
+
+.post-img  img {
+  border-radius: 10px;
+}
+
+
 .feature-blog-five .post-meta .blog-title a {
   font-size: 24px;
   font-weight: 500;
@@ -15109,10 +15166,7 @@ video {
                               E-Commerce     
 =========================================================================*/
 /*-------------------- Menu ---------------*/
-.theme-main-menu.sticky-menu.fixed.theme-menu-eight {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+
 .theme-menu-eight .signIn-action {
   font-family: "gordita";
   font-weight: 500;
@@ -16668,3 +16722,104 @@ video {
   position: absolute;
 }
 
+
+/* Estilos CSS para el formulario */
+.rounded-border {
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+/* Estilos para la letra gruesa y recargada a la izquierda */
+.form-label {
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+}
+
+.form-background {
+  background-image: url('../images/feature-img-01-01.png'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 20px; /* Añade espaciado interno según sea necesario */
+}
+
+/* Superposición de color semi-transparente */
+.form-background::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5); /* Color semi-transparente (en este caso, negro al 50%) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Asegura que la superposición esté detrás del contenido */
+}
+
+/* styles.css */
+
+.custom-card {
+  border-radius: 19px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.custom-material-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.custom-rounded-border {
+  border-radius: 4px;
+}
+
+.custom-button {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #292b2c;
+}
+
+
+.form-banner {
+  margin-top: 4vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (max-width:1360px) {
+  .form-banner {
+    margin-top: 120px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
+@media (max-width:980px) {
+  .form-banner {
+    margin-top: 0px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
+
+@media (max-width:764px) {
+  .form-banner {
+    margin-top: 0px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}
+
+/* Media query para pantallas más pequeñas (por ejemplo, smartphones) */
+@media (max-width: 576px) {
+  .form-banner {
+    margin-top: 0px;
+     /* Ajusta el margen superior para pantallas más pequeñas */
+  }
+}

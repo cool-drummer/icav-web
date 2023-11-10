@@ -14,7 +14,7 @@ const FormSurveyLanding = () => {
   return (
     <div className="main-page-wrapper p0 font-gordita">
       <Helmet>
-        <title>Lorem</title>
+        <title>icav teoloyucan</title>
       </Helmet>
       {/* End Page SEO Content */}
 

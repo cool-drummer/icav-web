@@ -1,44 +1,40 @@
+require('dotenv').config(); // Cargar variables de entorno desde el archivo .env
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Importa la librería cors
+const cors = require('cors');
 
 const app = express();
 
-// Configura el middleware para procesar datos JSON
 app.use(bodyParser.json());
-
-// Configura CORS para permitir solicitudes desde http://localhost:3000
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://www.icavteoloyucan.com',
   credentials: true,
 }));
 
-// Configura la ruta para enviar el correo electrónico
+const API_URL = process.env.API_URL || "https://api.icavteoloyucan.com";
+
+
 app.post('/api/send-email', (req, res) => {
   const { fullName, email, phone, prayerRequest } = req.body;
 
-  // Dirección de correo electrónico del destinatario obtenida del formulario
   const recipientEmail = email;
 
-  // Configura el transporte de correo electrónico usando nodemailer
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'dani.roomu@gmail.com',
-      pass: 'idqynzwxjxjcmmca'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
     }
   });
 
-  // Configura el contenido del correo electrónico
   const mailOptions = {
-    from: recipientEmail, // Usa la dirección de correo electrónico del cliente como destinatario
-    to: 'dani.roomu@gmail.com', 
+    from: recipientEmail,
+    to: 'dani.roomu@gmail.com',
     subject: 'Nueva solicitud de oración',
     text: `Nombre: ${fullName}\nEmail: ${email}\nTeléfono: ${phone}\nPetición de Oración: ${prayerRequest}`
   };
 
-  // Envía el correo electrónico
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('Error al enviar el correo electrónico:', error);
@@ -50,8 +46,10 @@ app.post('/api/send-email', (req, res) => {
   });
 });
 
-// Inicia el servidor en el puerto 3001
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Servidor en ejecución en el puerto ${PORT}`);
 });
+
+// Usar API_URL en algún lugar del código
+console.log(API_URL);
